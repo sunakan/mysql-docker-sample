@@ -1,1 +1,22 @@
 = MySQLサンプル
+
+.dbコンテナ
+----
+$ make up
+----
+
+.クライアントコンテナ（別shell）
+----
+別shellでクライアントコンテナ
+$ make bash
+クライアントコンテナ内で
+$ mysql --host mysql --user hoge --password
+passwordもhoge
+dbもhoge
+----
+
+.終了
+----
+$ make down
+$ make clean
+----
