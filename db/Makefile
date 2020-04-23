@@ -8,7 +8,7 @@ export MYSQL_PASSWORD=hoge
 .PHONY: create-tmp-volume, network, up, clean
 
 create-tmp-volume:
-	mkdir --parents ${TMP_MYSQL_VOLUME}
+	mkdir -p ${TMP_MYSQL_VOLUME}
 
 network:
 	docker network ls | grep ${DOCKER_NETWORK_NAME} \
@@ -22,7 +22,7 @@ up: create-tmp-volume network
 		--network ${DOCKER_NETWORK_NAME} \
 		--hostname mysql \
 		--name mysql \
-		--user `id --user`:`id --group` \
+		--user `id -u`:`id -g` \
 		--publish 3306:3306 \
 		--mount type=bind,source=${TMP_MYSQL_VOLUME},target=/var/lib/mysql/ \
 		--env MYSQL_ROOT_PASSWORD=root \

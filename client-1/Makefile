@@ -15,7 +15,7 @@ bash: network
 		--network ${DOCKER_NETWORK_NAME} \
 		--hostname mysql-client-1 \
 		--name mysql-client-1 \
-		--user `id --user`:`id --group` \
+		--user `id -u`:`id -g` \
 		--env LANG=C.UTF-8 \
 		--env TZ=Asia/Tokyo \
 		mysql:${DOCKER_MYSQL_TAG} \
