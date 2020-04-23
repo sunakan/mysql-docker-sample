@@ -1,10 +1,1 @@
-
-
-== このリポジトリを作るまでのコマンド群
-
-----
-GitHubでMITライセンス入りのリポジトリを作成
-$ git clone https://github.com/sunakan/mysql-docker-sample.git
-$ curl -o.gitignore https://gitignore.io/api/vim,linux,macos,emacs,windows
-$ git stage . && git commit -m "Add .gitignore"
-----
+= MySQLサンプル
