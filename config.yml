@@ -1,0 +1,11 @@
+---
+
+docker:
+  network_name: hoge-network
+  mysql_host: hoge-mysql
+  mysql_tag: 5.7
+db:
+  mysql_database: hoge-db
+  mysql_user: hoge-user
+  mysql_password: hoge-pass
+...
